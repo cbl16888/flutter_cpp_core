@@ -26,9 +26,6 @@ double hexListToFloat(List<int> value) {
     var outBuf = allocate<Uint8>(count: value.length);
     for (int i = 0; i < value.length; i++) {
         outBuf[i] = value[i];
-        outBuf[1] = 0xE6;
-        outBuf[2] = 0xF6;
-        outBuf[3] = 0x42;
     }
     var result = _hexToFloat(outBuf);
     free(outBuf);

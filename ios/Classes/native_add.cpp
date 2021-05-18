@@ -18,7 +18,7 @@ extern "C" {
     // Attributes to prevent 'unused' function from being removed and to make it visible
     __attribute__((visibility("default"))) __attribute__((used))
     float hex_to_float(char hex[4]) {
-        float f = *(float *)hex;
+        float f = *((float *)hex);
         return f;
     }
 }
